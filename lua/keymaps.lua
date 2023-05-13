@@ -3,6 +3,17 @@ local map = vim.keymap.set
 -- General
 map("i", "kj", "<ESC>", {})
 map("n", "<C-s>", "<cmd> w <CR>", {})
+map("v", "J", ":m '>+1<CR>gv=gv")
+map("v", "K", ":m '<-2<CR>gv=gv")
+map("n", "J", "mzJ`z")
+map("n", "<C-d>", "<C-d>zz")
+map("n", "<C-u>", "<C-u>zz")
+-- map("n", "n", "nzzzv")
+-- map("n", "N", "Nzzzv")
+
+--
+-- greatest remap ever
+map("x", "<leader>p", [["_dP]])
 
 -- nvimtree
 map("n", "<C-n>", "<cmd> NvimTreeToggle <CR>")
