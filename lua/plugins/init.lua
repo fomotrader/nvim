@@ -1,12 +1,11 @@
 local plugins = {
 	{ "nvim-lua/plenary.nvim" },
 	{
-		"navarasu/onedark.nvim",
+		"catppuccin/nvim",
+		name = "catppuccin",
 		priority = 1000,
 		config = function()
-			require("onedark").setup({
-				style = "darker",
-			})
+			require("plugins.configs.colorscheme")
 		end,
 	},
 	{ "nvim-telescope/telescope.nvim", tag = "0.1.1" },

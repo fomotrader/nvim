@@ -17,7 +17,7 @@ vim.opt.rtp:prepend(lazypath)
 require("plugins")
 
 -- Setting the color scheme here
--- vim.cmd "colorscheme onedark"
-require("onedark").load()
+vim.cmd("colorscheme catppuccin-macchiato")
+-- require("onedark").load()
 
 require("commands")
