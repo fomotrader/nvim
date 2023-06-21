@@ -1,8 +1,7 @@
 local plugins = {
 	{ "nvim-lua/plenary.nvim" },
 	{
-		"catppuccin/nvim",
-		name = "catppuccin",
+		"projekt0n/github-nvim-theme",
 		priority = 1000,
 		config = function()
 			require("plugins.configs.colorscheme")
@@ -60,12 +59,12 @@ local plugins = {
 			-- snippets engine
 			{
 				"L3MON4D3/LuaSnip",
-				dependencies = { "rafamadriz/friendly-snippets" },
 				config = function()
 					require("luasnip.loaders.from_vscode").lazy_load()
 				end,
 			},
 
+			{ "MunifTanjim/prettier.nvim" },
 			-- autopairs , autocompletes ()[] etc
 			{
 				"windwp/nvim-autopairs",
@@ -127,6 +126,32 @@ local plugins = {
 		config = function()
 			require("plugins.configs.which_key")
 		end,
+	},
+
+	{
+		"ray-x/go.nvim",
+		config = function()
+			require("go").setup()
+		end,
+	},
+
+	{
+		"simrat39/rust-tools.nvim",
+		config = function()
+			require("plugins.configs.rust_tools")
+		end,
+	},
+
+	{
+		"kevinhwang91/nvim-ufo",
+		config = function()
+			require("plugins.configs.ufo")
+		end,
+		dependencies = {
+			{
+				"kevinhwang91/promise-async",
+			},
+		},
 	},
 }
 
